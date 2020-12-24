@@ -1,12 +1,28 @@
+import React from 'react';
 import Head from 'next/head'
-import {Button} from 'antd'
+import {Row,Col} from 'antd'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Author from '../components/Author'
+import Advert from '../components/Advert'
 function Home() {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>首页</title>
       </Head>
-      <div><Button >首页</Button></div>
+      <Header />
+      <Row className="comm-main" type="flex" justify="center">
+        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
+            左侧
+        </Col>
+
+        <Col className="comm-box" xs={0} sm={0} md={7} lg={5} xl={4}>
+          <Author />
+          <Advert />
+        </Col>
+      </Row>
+      <Footer />
     </div>
   )
 }
