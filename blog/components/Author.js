@@ -3,7 +3,6 @@ import {Avatar,Divider} from 'antd'
 import '../styles/components/author.css'
 
 const Author =()=>{
-
     return (
         <div className="author-div comm-box">
             <div> <Avatar size={100} src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1730982190,88398299&fm=26&gp=0.jpg"  /></div>

@@ -12,12 +12,12 @@ function Home() {
         <title>首页</title>
       </Head>
       <Header />
-      <Row className="comm-main" type="flex" justify="center">
-        <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
+      <Row className="comm-main">
+        <Col className="comm-left" xs={24} sm={24} md={20} lg={18} xl={18}  >
             左侧
         </Col>
 
-        <Col className="comm-box" xs={0} sm={0} md={7} lg={5} xl={4}>
+        <Col className="comm-right" xs={0} sm={0} md={3} lg={5} xl={5}>
           <Author />
           <Advert />
         </Col>
