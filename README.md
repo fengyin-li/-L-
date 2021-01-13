@@ -38,6 +38,27 @@ npm run dev
 
 ### 启动讲解
 
+#### cmd终端中进入service文件夹
+
+```
+cd service
+```
+
+#### 安装依赖：
+
+```
+npm install
+```
+
+#### 运行本地环境
+
+```bash
+npm run dev
+```
+
 ### 技术栈
+
+后端采用了koa的上层框架[egg.js](https://github.com/eggjs/egg)编写，简化了项目创建流程。通过拉取生态环境的各种插件包实现了快速便捷式开发。
+
 
 

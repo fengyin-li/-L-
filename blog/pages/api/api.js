@@ -33,5 +33,8 @@ const API = {
     getIndex(){
         return getapi('http://127.0.0.1:7001/default/getArticleList')
     },
+    getDetailed(id){
+        return getapi('http://127.0.0.1:7001/default/getArticleById?id='+id)
+    }
 }
 export default API

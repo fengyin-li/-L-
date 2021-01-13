@@ -3,4 +3,5 @@ module.exports = app =>{
     router.get('/',controller.default.home.index)
     router.get('/default/index',controller.default.home.index)
     router.get('/default/getArticleList',controller.default.home.getArticleList)
+    router.get('/default/getArticleById',controller.default.home.getArticleById)
 }

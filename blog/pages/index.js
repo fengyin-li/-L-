@@ -1,4 +1,5 @@
 import {React,useState} from 'react';
+import Link from 'next/link'
 import Head from 'next/head'
 import {Row,Col,List,Icon} from 'antd'
 import Header from "../components/Header";
@@ -8,7 +9,7 @@ import Advert from '../components/Advert'
 import API from "./api/api";
 import time from './utils/time'
 function Home(list) {
-  console.log(list)
+  // console.log(list)
   const [ mylist , setMylist ] = useState(list.data);
   return (
     <div>
@@ -25,7 +26,11 @@ function Home(list) {
               dataSource={mylist}
               renderItem={item => (
                 <List.Item>
-                  <div className="list-title">{item.title}</div>
+                  <div className="list-title">
+                    <Link href={{pathname:'/detailed',query:{id:item.id}}}>
+                      <a>{item.title}</a>
+                    </Link>
+                  </div>
                   <div className="list-icon">
                     <span><Icon type="calendar" /> {time.getDateTime(item.addTime)}</span>
                     <span><Icon type="folder" /> {item.typeName}</span>
