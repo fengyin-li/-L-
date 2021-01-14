@@ -3,7 +3,6 @@ import {React,useState} from 'react'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import MarkNav from 'markdown-navbar';
-import axios from 'axios'
 import 'markdown-navbar/dist/navbar.css';
 import {Row, Col, Icon,Affix, Breadcrumb } from 'antd'
 import Header from '../components/Header'

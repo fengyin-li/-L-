@@ -1,7 +1,8 @@
 import {React,useState} from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
-import {Row,Col,List,Icon} from 'antd'
+import {Row,Col,List} from 'antd'
+import { CalendarOutlined,FolderOutlined,FireOutlined} from '@ant-design/icons';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Author from '../components/Author'
@@ -32,9 +33,9 @@ function Home(list) {
                     </Link>
                   </div>
                   <div className="list-icon">
-                    <span><Icon type="calendar" /> {time.getDateTime(item.addTime)}</span>
-                    <span><Icon type="folder" /> {item.typeName}</span>
-                    <span><Icon type="fire" /> {item.view_count}人</span>
+                    <span><CalendarOutlined /> {time.getDateTime(item.addTime)}</span>
+                    <span><FolderOutlined /> {item.typeName}</span>
+                    <span><FireOutlined /> {item.view_count}人</span>
                   </div>
                   <div className="list-context">{item.article_cointent}</div>  
                 </List.Item>

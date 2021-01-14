@@ -16,17 +16,21 @@ class HomeController extends Controller {
   };
   async getArticleById(){
     //先配置路由的动态传值，然后再接收值
-    console.log(this.ctx.query)
+    // console.log(this.ctx.query)
     let id = this.ctx.query.id
     let sql = 'SELECT * FROM article WHERE article.id='+id
     const result = await this.app.mysql.query(sql)
-    console.log('数据库返回结果',result)
+    // console.log('数据库返回结果',result)
     let text = ''
     if (result.length == 1) {
       text = result[0].article_cointent
     }
     this.ctx.body={text}
   };
+  async getTypeInfo(){
+    const result = await this.app.mysql.select('type')
+    this.ctx.body = {data:result}
+  }
 }
 
 module.exports = HomeController;

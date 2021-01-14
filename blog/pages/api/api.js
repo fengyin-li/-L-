@@ -1,5 +1,6 @@
 import axios from "axios";
 let Axios = axios.create({
+    baseURL: 'http://127.0.0.1:7001/default',
     timeout: 30000,
     headers: {
         'Content-Type': 'application/json; charset=utf-8'
@@ -31,10 +32,10 @@ const getapi=(url)=>{
 }
 const API = {
     getIndex(){
-        return getapi('http://127.0.0.1:7001/default/getArticleList')
+        return getapi('/getArticleList')
     },
     getDetailed(id){
-        return getapi('http://127.0.0.1:7001/default/getArticleById?id='+id)
+        return getapi('/getArticleById?id='+id)
     }
 }
 export default API
